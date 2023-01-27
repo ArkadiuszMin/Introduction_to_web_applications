@@ -1,0 +1,189 @@
+@keyframes slideleft{
+    from{
+        transform: translateX(-2000px);
+    }
+    to{
+        transform: translateX(0px);
+    }
+}
+
+@keyframes slideright{
+    from{
+        transform: translateX(2000px);
+    }
+    to{
+        transform: translateX(0px);
+    }
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+#background{
+    position: absolute;
+    left: -30px;
+    top: -200px;
+    margin: 0;
+    padding: 0;
+    width: 101.55%;
+    height: 650px;
+    background-color: blue;
+    transform: skewY(-7deg);
+    z-index: -100;
+}
+
+#changed{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#container{
+    display: flex;
+    justify-content: center;
+    animation-duration: 2s;
+    animation-name: slideleft;
+    width: 100%;
+    z-index: 500;
+}
+
+#info{
+    position: absolute;
+    top: 60px;
+    left: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 10px;
+    width: 40%;
+    color: white;
+}
+
+h2{
+    font-size: 40px;
+}
+
+h3{
+    color: grey;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+#border{
+    display: inline;
+    padding: 20px;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+#formularz{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 40px;
+    width: 350px;
+    height: 430px;
+    padding-right: 60px;
+    padding-left: 50px;
+    top: 90px;
+    right: 250px;
+    background-color: white;
+
+    border-radius: 10px;
+    box-shadow: 0px 0px 40px 10px black;
+
+    animation-duration: 2s;
+    animation-name: slideright;
+}
+
+#formik{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 50px;
+}
+
+button{
+    background-color: blue;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+input{
+    border: none;
+    border-bottom: 1px solid grey;
+    width: 300px;
+}
+
+#zakrywacz{
+    position: absolute;
+    height: 100px;
+    width: 250px;
+    background-color: white;
+    top: 540px;
+    left: 0px;
+}
+
+@media (max-width: 1400px){
+    #changed{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 70px;
+    }
+    #info{
+        position: static;
+        row-gap: 3px;
+        width: 450px;
+        align-items: center;
+    }
+    #container{
+        animation-name: slideup;
+        animation-duration: 2s;
+    }
+    #formularz{
+        position: static;
+        animation-name: slidedown;
+        animation-duration: 2s;
+    }
+    #zakrywacz{
+        height: 0px;
+        width: 0px;
+    }
+    #background{
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 98vh;
+        margin: 0;
+        transform: skewY(0deg);
+    }
+    @keyframes slidedown {
+        from{
+            transform: translateY(-2000px);
+        }
+        to{
+            transform: translateY(0px);
+        }
+    }
+    @keyframes slideup{
+        from{
+            transform: translateY(2000px);
+        }
+        to{
+            transform: translateY(0px);
+        }
+    }
+}

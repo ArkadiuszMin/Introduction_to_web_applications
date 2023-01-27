@@ -1,0 +1,99 @@
+.logoConteiner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+
+    &__nazwa1{
+        font-size: 50px;
+        font-weight: bolder;
+        color: blue;
+    }
+
+    &__nazwa2{
+        font-size: 35px;
+        font-weight: bolder;
+        color: red;
+    }
+}
+
+.linksConteiner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 20px;
+
+    &__link{
+        text-decoration: none;
+        font-size: 30px;
+        color: black;
+        font-weight: bold;
+        cursor: pointer;
+
+        &:hover{
+            color: red;
+        }
+    }
+
+    &__info{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &--details{
+            text-align: center;
+            color: red;
+        }
+    }
+}
+
+.koszykConteiner{
+    background-color: orange;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+    width: 200px;
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    &__koszyk{
+        color: white;
+        font-weight: bold;
+        font-size: 30px;
+    }
+
+    &__info{
+        align-self: flex-start;
+        color: white;
+        font-size: 25px;
+    }
+
+    &:hover{
+        background-color: rgb(189, 96, 21);
+    }
+}
+
+.login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    color: red;
+    &:hover{
+        color: blue;
+    }
+
+    &__name{
+        text-align: center;
+        font-size: 20px;
+        font-weight: bolder;
+    }
+}
+
+@media (max-width: 1400px){
+    .linksConteiner{
+        flex-direction: column;
+        row-gap: 20px;
+    }
+}

@@ -1,0 +1,81 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+#butons{
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.buton{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: 2px solid black;
+    margin: 3px;
+    background-color: rgb(192, 189, 189);
+    cursor: pointer;
+}
+
+.buton:hover{
+    background-color: rgb(145, 138, 138);
+}
+
+#conteiner{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.element{
+    width: 7%;
+    text-align: center;
+}
+
+.element2{
+    text-align: center;
+    width: 20%;
+    font-size: 15px;
+}
+
+#columns{
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: grey;
+}
+
+.record{
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(187, 180, 180);
+    position: relative;
+}
+
+.arrow{
+    position: absolute;
+    left: 30px;
+    top: 30%;
+    cursor: pointer;
+}
+
+.subrecord{
+    height: 60px;
+    background-color: rgb(212, 209, 209);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.countries{
+    display: flex;
+    flex-direction: column;
+}

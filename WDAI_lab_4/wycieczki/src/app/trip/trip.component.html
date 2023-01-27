@@ -1,0 +1,33 @@
+
+<picture>
+    <img src="{{singleTrip.image}}" id = "zdjecie">
+    <div id = "remove" (click) = "remove()">X</div>
+</picture>
+<div id = "info">
+    <h1 id = "name">{{singleTrip.name|uppercase}}</h1>
+    <h2 id = "country">{{singleTrip.country|uppercase}}</h2>
+    <p>{{singleTrip.description}}</p>
+    <div id = "daty">
+        <div class = "data">Start: {{singleTrip.start}}</div>
+        <div class = "data">End: {{singleTrip.end}}</div>
+        <div id ="starConteiner">
+            <div class = "star" (mouseover) = "light(1)" (mouseout) = "light(0)" (click)="rate(1)" [ngStyle] ="{'background-color': starNumber >= 1 ? 'gold': 'grey', 'cursor': rating==0 ? 'pointer': 'default'}"></div>
+            <div class = "star" (mouseover) = "light(2)" (mouseout) = "light(0)" (click)="rate(2)" [ngStyle] ="{'background-color': starNumber >= 2 ? 'gold': 'grey', 'cursor': rating==0 ? 'pointer': 'default'}"></div>
+            <div class = "star" (mouseover) = "light(3)" (mouseout) = "light(0)" (click)="rate(3)" [ngStyle] ="{'background-color': starNumber >= 3 ? 'gold': 'grey', 'cursor': rating==0 ? 'pointer': 'default'}"></div>
+            <div class = "star" (mouseover) = "light(4)" (mouseout) = "light(0)" (click)="rate(4)" [ngStyle] ="{'background-color': starNumber >= 4 ? 'gold': 'grey', 'cursor': rating==0 ? 'pointer': 'default'}"></div>
+            <div class = "star" (mouseover) = "light(5)" (mouseout) = "light(0)" (click)="rate(5)" [ngStyle] ="{'background-color': starNumber >= 5 ? 'gold': 'grey', 'cursor': rating==0 ? 'pointer': 'default'}"></div>
+        </div>
+    </div>
+</div>
+<div id = "podsekcja">
+    <div id = "licznik">
+        <div class = "plusminus" *ngIf = "licznik != 0" (click) = "odejmij()">+</div>
+        <div id = "ilosc">{{licznik}}</div>
+        <div class = "plusminus" id = "minus" *ngIf = "licznik != singleTrip.capacity" (click) = "dodaj()">-</div>
+    </div>
+    <div id = "rezerwacje">
+        <div id = "warning" *ngIf = "licznik <= 3 && licznik!=0">!</div>
+        <div id = "brak" *ngIf = "licznik == 0">Brak miejsc</div>
+        <div id = "cena">{{singleTrip.price|currency:'USD'}}</div>
+    </div>
+</div>

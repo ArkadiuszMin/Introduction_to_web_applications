@@ -1,0 +1,161 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    background-color: rgb(204, 140, 151);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container{
+    width: 900px;
+    height: 550px;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(16, 147, 170);
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.7);
+}
+
+span{
+    color: white;
+}
+
+#arrowleft{
+    width: 30px;
+    height: 50px;
+    background-color: rgb(43, 63, 155);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-start;
+    margin-top: 70px;
+    cursor: pointer;
+}
+
+#arrowleft:hover{
+    background-color: rgb(27, 46, 129);
+}
+
+
+
+#arrowright{
+    width: 30px;
+    height: 50px;
+    background-color: rgb(43, 63, 155);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-start;
+    margin-top: 70px;
+    cursor: pointer;
+}
+
+#arrowright:hover{
+    background-color: rgb(27, 46, 129);
+}
+
+.karta{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.ukosnik{
+    font-size: 30px;
+    color: pink;
+    font-weight: bolder;
+}
+
+.naglowek{
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.zdjecie{
+    width: 100px;
+    height: 100px;
+    border-radius: 60px;
+    border: 7px solid white;
+    box-shadow: 0 0 3px 0 black;
+}
+
+.wizytowka{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+    transition: transform 0.3s;
+    float: left;
+}
+
+.imie{
+    color: pink;
+    font-size: 20px;
+}
+
+h1{
+    width: 90%;
+    text-align: center;
+}
+
+h3{
+    font-weight: lighter;
+}
+
+p{
+    text-align: center;
+    width: 80%;
+}
+
+
+#dol{
+    font-size: 150px;
+    color: pink;
+}
+
+#slajder{
+    width: 90%;
+    overflow: hidden;
+    display: flex;
+}
+
+#wizytowka1{
+    display: none;
+    transform: translateX(-1400px);
+
+}
+
+#wizytowka2{
+    display: none;
+    transform: translateX(-700px);
+}
+
+#wizytowka3{
+    display: flex;
+    transform: translateX(0px);
+}
+
+#wizytowka4{
+    display: none;
+    transform: translateX(700px);
+}
+
+#wizytowka5{
+    display: none;
+    transform: translateX(1400px);
+}
+
+#losowosc{
+    cursor: pointer;
+}

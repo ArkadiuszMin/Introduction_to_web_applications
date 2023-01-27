@@ -1,0 +1,83 @@
+
+
+.karta{
+    border-radius: 5px;
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-bottom: 30px;
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.7);
+    width: 23%;
+    float: left;
+}
+
+#zdjatko{
+    width: 100%;
+    border-radius: 5px;
+}
+
+h1{
+    margin-top: 10%;
+    margin-left: 7%;
+    margin-bottom: 2%;
+}
+
+h2{
+    margin-top: 1%;
+    color: rgb(209, 54, 54);
+    margin-left: 7%;
+    font-size: medium;
+}
+
+p{
+    margin: 5% 5% 5% 7%;
+    color: rgb(78, 74, 74);
+}
+
+.smiesznypasek{
+    margin: 5% 5% 1% 7%;
+    height: 1px;
+    background-color: grey;
+}
+
+.readarticle{
+    display: inline-block;
+    margin: 7% 0% 7% 7%;
+    background-color: rgb(209, 54, 54);
+    padding: 5%;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+}
+
+.likes{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+    float:right;
+    margin: 9% 7% 0% 7%;
+    text-justify: auto;
+}
+
+.item{
+    display: flex;
+    column-gap: 5px;
+}
+
+@media (max-width: 1400px){
+    .karta{
+        width: 31.3%;
+    }
+}
+
+@media (max-width: 1030px){
+    .karta{
+        width: 48%;
+    }
+}
+
+@media (max-width: 700px){
+    .karta{
+        width: 98%;
+    }
+}

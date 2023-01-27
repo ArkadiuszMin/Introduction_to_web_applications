@@ -1,0 +1,16 @@
+<div id ="navbar">
+    <div id = "upConteiner">
+        <div id = "counter" [ngStyle] = "{'background-color': counter > 10 ? 'green' : 'red'}">Ilość wycieczek w koszyku: {{counter}}</div>
+        <div id = "add" (click) ="changeForm()">Dodaj wycieczke +</div>
+    </div>
+    <app-koszyk></app-koszyk>
+</div>
+
+
+<app-form [ukryty] ="form" (outputTrip) = "addTrip($event)"></app-form>
+<div id = "conteiner">
+    <app-trip *ngFor = "let trip of tripList, index as i" [ngStyle] = "{'border': trip.price==highestPrice ? '5px solid green': trip.price==lowestPrice ? '5px solid red' : 'none' }" [index] = "i"[singleTrip] = "trip" (counterek) = "changeCounter($event)" (outputIndex) = "remove($event)"></app-trip>
+</div>
+
+
+ 

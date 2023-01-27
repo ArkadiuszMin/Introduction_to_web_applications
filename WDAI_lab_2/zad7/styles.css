@@ -1,0 +1,120 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+#container{
+    display: flex;
+    height: 50vw;
+    width: 100%;
+}
+
+.pasek{
+    height: 950px;
+    width: 40%;
+    background-color: rgb(30, 48, 95);
+}
+
+#center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#photo{
+    width: 700px;
+    height: 950px;
+}
+
+#walter{
+    position: absolute;
+    width: 150px;
+    height: 210px;
+    top: 30px;
+    left: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px 5px black;
+}
+
+#buttons{
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+    position: absolute;
+    bottom: 30px;
+
+}
+
+.single_button{
+    width: 50px;
+    height: 50px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#hangup{
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#sztuczny_content{
+    height: 2000px;
+}
+
+#zasieg{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 4px;
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+    background-color: white;
+    padding: 6px;
+    border-radius: 13px;
+}
+
+.active{
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: rgb(13, 128, 128);
+}
+
+.passive{
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: rgb(165, 161, 161);
+}
+
+@media (max-width: 730px){
+    .pasek{
+        width: 0px;
+    }
+    #photo{
+        width: 730;
+        height: 950px;
+    }
+    #center{
+        height: 950px;
+        width: 100%;
+
+    }
+    #buttons{
+        bottom: 20px;
+    } 
+    #zasieg{
+        bottom: 20px;
+    }
+}

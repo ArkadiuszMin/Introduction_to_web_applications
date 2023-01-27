@@ -1,0 +1,96 @@
+#conteiner{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+input{
+    width: 300px;
+    height: 30px;
+    position: relative;
+    
+
+
+}
+
+input:focus{
+    border: 2px solid green;
+    outline: none;
+}
+
+#niezgodnosc{
+    font-size: 15px;
+    color: red;
+    display: none;
+}
+
+#on1{
+    position: absolute;
+    top: 43px;
+    left: 280px;
+    cursor: pointer;
+}
+
+#off1{
+    position: absolute;
+    top: 43px;
+    left: 280px;
+    display: none;
+    cursor: pointer;
+}
+
+#on2{
+    position: absolute;
+    top: 118px;
+    left: 280px;
+    cursor: pointer;
+}
+
+#off2{
+    position: absolute;
+    top: 118px;
+    left: 280px;
+    display: none;
+    cursor: pointer;
+}
+
+.wymog{
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.greycircle{
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    background-color: grey;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.greencircle{
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    background-color: green;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#green1{
+    display: none;
+}
+#green2{
+    display: none;
+}
+#green3{
+    display: none;
+}
+#green4{
+    display: none;
+}

@@ -1,0 +1,394 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+#card{
+    margin-left: auto;
+    margin-right: auto;
+    width: 1300px;
+    height: 700px;
+    margin-top: 100px;
+    background-color: rgb(184, 171, 171);
+    position: relative;
+}
+
+#shoecard{
+    height: 500px;
+    width: 500px;
+    background-image: linear-gradient(to top right, rgb(19, 39, 221), rgb(24, 95, 177));
+    display: inline-block;
+    margin-left: 100px;
+    margin-top: 50px;
+    font-size: 190px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.2);
+    line-height: 200px;
+    float: left;
+    z-index: 10;
+}
+
+#znaczki{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+
+
+}
+
+#strangeicon{
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#ikonka{
+    color: blue;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+#logo{
+    width: 125px;
+    height: 50px;
+}
+
+#but{
+    transform: rotateZ(-15deg) scale(0.4, 0.4);
+    position: absolute;
+    top: -210px;
+    left: -600px;
+}
+
+#info{
+    height: 650px;
+    width: 600px;
+    background-color: white;
+    float: left;
+    box-shadow: 10px 8px 5px 5px rgba(59, 58, 58, 0.3);
+    display: flex;
+    column-gap: 50px;
+}
+
+#container{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+h1{
+    padding: 0;
+    margin: 0;
+}
+h2{
+    padding: 0;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+h3{
+    padding: 0;
+    margin: 0;
+}
+p{
+    padding: 0;
+    margin: 0;
+}
+
+.pasek{
+    height: 1px;
+    width: 400px;
+    background-color: grey;
+    margin-top: 20px;
+}
+
+#nazwa{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+#new{
+    width: 60px; 
+    height: 30px;
+    background-color: blue;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bolder;
+}
+
+#sizes{
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.rozmiar{
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: rgba(161, 161, 161, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.rozmiarinp:checked + label .rozmiar{
+    background-color: blue;
+    color: white;
+}
+
+#kolorki{
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.kolo{
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+#niebieski{
+    background-color: blue;
+}
+#czerwony{
+    background-color: red;
+}
+#zielony{
+    background-color: green;
+}
+#pomaranczowy{
+    background-color: orange;
+}
+#czarny{
+    background-color: black;
+}
+
+input{
+    display: none;
+}
+
+#sizes input{
+    display: none;
+}
+/*
+Rzeczy do zmieniania kolorkow:
+#but - kolor buta
+#shoecard - gradient w tle
+#ikonka - color
+#new - background color
+#add - background color
+.rozmiarinp:checked + label .rozmiar - background color
+*/
+
+#niebieskiinp:checked ~ label #niebieski{
+    width: 15px;
+    height: 15px;
+    border: 7.5px solid white;
+    box-shadow: 0 0 5px 5px rgb(0, 0,0 , 0.2);
+}
+
+
+
+#czerwonyinp:checked ~ label #czerwony{
+    width: 15px;
+    height: 15px;
+    border: 7.5px solid white;
+    box-shadow: 0 0 5px 5px rgb(0, 0,0 , 0.2);
+}
+
+#card:has(#czerwonyinp:checked) #but{
+    filter: hue-rotate(120deg);
+
+}
+
+#card:has(#czerwonyinp:checked) .rozmiarinp:checked + label .rozmiar{
+    background-color: red;
+}
+
+#card:has(#czerwonyinp:checked) #shoecard{
+    background-image: linear-gradient(to top right, red ,rgb(196, 84, 84));
+}
+
+#card:has(#czerwonyinp:checked) #ikonka{
+    color: red;
+}
+
+#card:has(#czerwonyinp:checked) #new{
+    background-color: red;
+}
+
+#card:has(#czerwonyinp:checked) #add{
+    background-color: red;
+}
+
+
+#zielonyinp:checked ~ label #zielony{
+    width: 15px;
+    height: 15px;
+    border: 7.5px solid white;
+    box-shadow: 0 0 5px 5px rgb(0, 0,0 , 0.2);
+}
+
+#card:has(#zielonyinp:checked) #but{
+    filter: hue-rotate(230deg);
+
+}
+
+#card:has(#zielonyinp:checked) .rozmiarinp:checked + label .rozmiar{
+    background-color: green;
+}
+
+#card:has(#zielonyinp:checked) #shoecard{
+    background-image: linear-gradient(to top right, green ,rgb(74, 179, 74));
+}
+
+#card:has(#zielonyinp:checked) #ikonka{
+    color: green;
+}
+
+#card:has(#zielonyinp:checked) #new{
+    background-color: green;
+}
+
+#card:has(#zielonyinp:checked) #add{
+    background-color: green;
+}
+
+
+
+#pomaranczowyinp:checked ~ label #pomaranczowy{
+    width: 15px;
+    height: 15px;
+    border: 7.5px solid white;
+    box-shadow: 0 0 5px 5px rgb(0, 0,0 , 0.2);
+}
+
+#card:has(#pomaranczowyinp:checked) #but{
+    filter: hue-rotate(155deg);
+
+}
+
+#card:has(#pomaranczowyinp:checked) .rozmiarinp:checked + label .rozmiar{
+    background-color: orange;
+}
+
+#card:has(#pomaranczowyinp:checked) #shoecard{
+    background-image: linear-gradient(to top right, orange ,rgb(221, 168, 69));
+}
+
+#card:has(#pomaranczowyinp:checked) #ikonka{
+    color: orange
+}
+
+#card:has(#pomaranczowyinp:checked) #new{
+    background-color: orange;
+}
+
+#card:has(#pomaranczowyinp:checked) #add{
+    background-color: orange;
+}
+
+
+
+#czarnyinp:checked ~ label #czarny{
+    width: 15px;
+    height: 15px;
+    border: 7.5px solid white;
+    box-shadow: 0 0 5px 5px rgb(0, 0,0 , 0.2);
+}
+
+#card:has(#czarnyinp:checked) #but{
+    filter: grayscale(1);
+
+}
+
+#card:has(#czarnyinp:checked) .rozmiarinp:checked + label .rozmiar{
+    background-color: black;
+}
+
+#card:has(#czarnyinp:checked) #shoecard{
+    background-image: linear-gradient(to top right, black ,rgb(82, 78, 78));
+}
+
+#card:has(#czarnyinp:checked) #ikonka{
+    color: black
+}
+
+#card:has(#czarnyinp:checked) #new{
+    background-color: black;
+}
+
+#card:has(#czarnyinp:checked) #add{
+    background-color: black;
+}
+
+
+
+
+
+
+#zakupy{
+    display: flex;
+    align-items: center;
+    column-gap: 80px;
+}
+
+#add{
+    width: 200px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+}
+
+#cena{
+    font-size: 50px;
+    font-weight: bolder;
+    color: rgb(39, 37, 37);
+}
+
+@media (max-width: 1350px){
+    #card{
+        background-color: aqua;
+
+        width: 100%;
+        margin: 0;
+    }
+    #shoecard{
+        width: 100%;
+        margin: 0;
+        line-height: 100px;
+        height: 400px;
+        float: none;
+
+    }
+    #info{
+        width: 100%;
+        float: none;
+    }
+    #but{
+        transform: scale(0.3, 0.3) translateX(-3000px);
+        position: absolute;
+        left: 50%;
+        top: -300px;
+    }
+
+}

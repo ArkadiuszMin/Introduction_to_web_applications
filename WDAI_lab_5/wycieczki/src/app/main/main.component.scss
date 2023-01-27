@@ -1,0 +1,31 @@
+app-navbar{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid black;
+}
+@media (max-width: 1400px){
+    app-navbar{
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 20px;
+    }
+}
+
+.outletLook{
+    width: 100%;
+}
+
+#navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    column-gap: 20px;
+}
+
+

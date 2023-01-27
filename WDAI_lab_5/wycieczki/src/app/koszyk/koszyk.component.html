@@ -1,0 +1,16 @@
+<div class = "conteiner">
+    <div class = "conteiner__little">
+        <div class = "borders">Koszyk</div>
+        <div class = "pasek"></div>
+        <div class = "record" *ngFor = "let wycieczka of trips, index as i">
+            <div class = "record__item">{{wycieczka.trip.name}}</div>
+            <div class = "record__item">Q: {{wycieczka.quantity}}</div>
+            <div class = "record__item">{{wycieczka.fullPrice|currency: 'USD'}}</div>
+            <div class = "record__kup" (click) = "kup(i)">KUP</div>
+        </div>
+        
+        <div class = "pasek"></div>
+        <div class = "borders">{{dane.price|currency: 'USD'}}</div>
+    </div>
+    
+</div>

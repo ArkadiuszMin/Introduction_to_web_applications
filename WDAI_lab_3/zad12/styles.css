@@ -1,0 +1,69 @@
+body{
+    margin: 0;
+    padding: 0;
+    cursor: none;
+}
+
+#board{
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background-image: url(images/board-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#score{
+    color: white;
+    font-size: 100px;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+
+#hearts{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    display: flex;
+    align-items: center;
+}
+
+span{
+    color: white;
+}
+
+.zombie{
+    background-image: url(images/walkingdead.png);
+    background-position-x: 1800px;
+    position: absolute;
+    left: 300px;
+    width: 200px;
+    height: 312px;
+}
+
+#test{
+    bottom: 30px;
+}
+
+#celownik{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    border: 5px solid white;
+    border-radius: 40px;
+    z-index: 10;
+    pointer-events: none;
+}
+
+#kropka{
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 5px;
+    pointer-events: none;
+}

@@ -1,0 +1,53 @@
+<div class = "conteiner">
+    <form #form="ngForm" id = "formularz" (ngSubmit) = "addTrip()">
+        <div class = "form-group">
+            <label for="name">Nazwa</label>
+            <input type="text" name="name" class = "form-input" [(ngModel)] ="trip.name" required>
+        </div>
+        <div class = "form-group">
+            <label for="country">Kraj</label>
+            <input type="text" name="country" class = "form-input" [(ngModel)] = "trip.country" required>
+        </div>
+        <div class = "form-group">
+            <label for="description">Opis</label>
+            <input type="text" name="description" class = "form-input" [(ngModel)] = "trip.description" required>
+        </div>
+        <div class = "form-group">
+            <label for="start">Data startu</label>
+            <input type="date" name="start" class = "form-input" [(ngModel)] = "trip.start" required>
+            <div [hidden] = "validData" class = "valid">*Podana data jest pozniejsza niz data konca wycieczki</div>
+            <div [hidden] = "validToday" class = "valid">*Podana data jest przed dniem dzisiejszym</div>
+        </div>
+        <div class = "form-group">
+            <label for="end">Data końca</label>
+            <input type="date" name="end" class = "form-input" [(ngModel)] = "trip.end" required>
+        </div>
+        <div class = "form-group">
+            <label for="capacity">Ilość wycieczek</label>
+            <input type="number" name="capacity" class = "form-input" [(ngModel)] = "trip.capacity" required pattern="^([^.0-]\d+|\d)">
+        </div>
+        <div class = "form-group">
+            <label for="price">Cena</label>
+            <input type="number" name="price" class = "form-input" [(ngModel)] = "trip.price" required pattern="^([^.0-]\d+|\d)"> 
+        </div>
+        <div class = "form-group">
+            <label for="photo">Zdjecia</label>
+            <select name="photo" class = "form-input" [(ngModel)] = "trip.image" required>
+                <option *ngFor = "let trip of tripList" value="{{trip}}">{{trip}}</option>
+            </select>
+            <select name="photo1" class = "form-input" [(ngModel)] = "trip.images[0]" required>
+                <option *ngFor = "let trip of tripList" value="{{trip}}">{{trip}}</option>
+            </select>
+            <select name="photo2" class = "form-input" [(ngModel)] = "trip.images[1]" required>
+                <option *ngFor = "let trip of tripList" value="{{trip}}">{{trip}}</option>
+            </select>
+            <select name="photo3" class = "form-input" [(ngModel)] = "trip.images[2]" required>
+                <option *ngFor = "let trip of tripList" value="{{trip}}">{{trip}}</option>
+            </select>
+            <select name="photo4" class = "form-input" [(ngModel)] = "trip.images[3]" required>
+                <option *ngFor = "let trip of tripList" value="{{trip}}">{{trip}}</option>
+            </select>
+        </div>
+        <button type="submit" id = "submit" [disabled] = "!form.valid">Dodaj</button>
+    </form>
+</div>

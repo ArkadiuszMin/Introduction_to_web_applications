@@ -1,0 +1,30 @@
+
+<div id = "conteiner">
+    <div class = "miniconteiner">
+        <label for="brands">Choose your brand: </label>
+        <select name="brands" id="brandsid" (input)="ChoosenBrand($event)">
+            <option value="" selected disabled>Wybierz marke</option>
+            <option *ngFor = "let car of carsList; index as i" value="{{i}}" >{{car.brand}}</option>
+        </select>
+    </div>
+    <div class = "miniconteiner">
+        <label for="models" [hidden] = "currentCar.brand==''">Choose your model: </label>
+        <select name="model" id="modelid" [hidden] = "currentCar.brand==''" (input)="ChoosenModel($event)">
+            <option value="" selected disabled>Wybierz model</option>
+            <option *ngFor = "let model of currentCar.models; index as i" value={{i}}>{{model.model}}</option>
+        </select>
+    </div>
+    <div class = "miniconteiner">
+        <input *ngFor = "let color of currentModel.color" type="radio" name="kolorki" id="{{color}}" value = "{{color}}" class = "radios" (input)="ChoosenColor($event)">
+        <label *ngFor = "let color of currentModel.color" for="{{color}}" [hidden] = "currentModel.model == ''" [ngStyle] = "{'background-color': color}" class = "labels"></label>
+    </div>
+    <div [hidden] = "currentColor == ''">
+        <h1>Marka: {{currentCar.brand}}</h1>
+        <h2>Model: {{currentModel.model}}</h2>
+        <h3>Kolor: {{currentColor}}</h3>
+        <p>Opis: {{currentModel.description}}</p>
+    </div>
+
+    
+</div>
+

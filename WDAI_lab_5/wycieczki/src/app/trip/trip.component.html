@@ -1,0 +1,25 @@
+
+<picture>
+    <img src="{{singleTrip.image}}" id = "zdjecie" routerLink = "/trip-list/{{index}}">
+    <div id = "remove" (click) = "remove()">X</div>
+</picture>
+<div id = "info">
+    <h1 id = "name">{{singleTrip.name|uppercase}}</h1>
+    <h2 id = "country">{{singleTrip.country|uppercase}}</h2>
+    <div id = "daty">
+        <div class = "data">Start: {{singleTrip.start}}</div>
+        <div class = "data">End: {{singleTrip.end}}</div>
+    </div>
+</div>
+<div id = "podsekcja">
+    <div id = "licznik">
+        <div class = "plusminus" *ngIf = "licznik != 0" (click) = "odejmij()">+</div>
+        <div id = "ilosc">{{licznik}}</div>
+        <div class = "plusminus" id = "minus" *ngIf = "licznik != singleTrip.capacity" (click) = "dodaj()">-</div>
+    </div>
+    <div id = "rezerwacje">
+        <div id = "warning" *ngIf = "licznik <= 3 && licznik!=0">!</div>
+        <div id = "brak" *ngIf = "licznik == 0">Brak miejsc</div>
+        <div id = "cena">{{singleTrip.price|currency:'USD'}}</div>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+<div class = "bigConteiner">
+    <div class = "filter">
+        <label for="status" class="labelek">Filtruj po statusie: </label>
+        <select name="status" id="status" class = "selectcik" (input) = "filter($event)">
+            <option value="" disabled selected>Wybierz Status</option>
+            <option value="Przed">Przed</option>
+            <option value="W trakcie">W trakcie</option>
+            <option value="Zakończona">Zakończona</option>
+        </select>
+    </div>
+    <div class = "conteiner">
+        <table class = "conteiner__table">
+            <tr>
+                <th>Data Zakupu</th>
+                <th>Nazwa Wycieczki</th>
+                <th>Lokalizacja</th>
+                <th>Cena</th>
+                <th>Start</th>
+                <th>Koniec</th>
+                <th>Ilość</th>
+                <th>Status</th>
+            </tr>
+            <tr *ngFor = "let wycieczka of kupione" [hidden] = "choosenStatus != '' && choosenStatus != wycieczka.status">
+                <td>{{data}}</td>
+                <td>{{wycieczka.trip.trip.name}}</td>
+                <td>{{wycieczka.trip.trip.country}}</td>
+                <td>{{wycieczka.trip.fullPrice|currency: 'USD'}}</td>
+                <td>{{wycieczka.trip.trip.start}}</td>
+                <td>{{wycieczka.trip.trip.end}}</td>
+                <td>{{wycieczka.trip.quantity}}</td>
+                <td>{{wycieczka.status}}</td>
+            </tr>
+        </table>
+    </div>
+</div>

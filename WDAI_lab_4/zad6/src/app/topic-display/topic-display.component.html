@@ -1,0 +1,13 @@
+<div id = "conteiner">
+    <div id = "informations">
+        <h1>{{naglowek}}</h1>
+        <p>{{info}}</p>
+    </div>
+    <div id = "board">
+        <h1 id="header">Wybierz temat</h1>
+        <div id = "tematy">
+            <app-single-topic *ngFor = "let temat of topicList, index as i" [topic] = "temat.topic" [short] = "temat.short" [order] = "i" (OutputTopicNumber)="Show($event)"></app-single-topic>
+        </div>
+        <div></div>
+    </div>
+</div>

@@ -1,0 +1,126 @@
+.picture{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    &__zdjecie{
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    &__niebieski{
+        background-color: rgba(67, 67, 243, 0.5);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        clip-path: polygon(100% 0, 0 0, 0 100%);
+    }
+
+    &__zolty{
+        background-color: rgba(255, 208, 0, 0.5);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        clip-path: polygon(100% 100%, 0 100%, 0 0);
+    }
+
+    &__crown{
+        background-color: orange;
+        position: absolute;
+        width: 300px;
+        top: 29%;
+        right: 100px;
+        height: 200px;
+        clip-path: polygon(52% 0, 78% 47%, 100% 0, 100% 100%, 0 100%, 0 0, 26% 46%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+        &--napis{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 80%;
+            font-size: 20px;
+            color: blue;
+            font-weight: bolder;
+            margin-top: 50px;
+        }
+    }
+
+    &__gora{
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 10px;
+        color: white;
+        font-size: 50px;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    &__dol{
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: 10px;
+        color: white;
+        font-size: 50px;
+        font-weight: bold;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &--contactConteiner{
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+        }
+    }
+}
+
+@media (max-width: 1400px){
+    .picture{
+        &__gora{
+            font-size: 30px;
+        }
+        &__dol{
+            font-size: 30px;
+        }
+    }
+}
+
+@media (max-width: 900px){
+    .picture{
+        &__gora{
+            font-size: 20px;
+        }
+        &__dol{
+            font-size: 20px;
+        }
+    }
+}
+
+.obwodka{
+    border: 2px solid black;
+}
+
+.conteiner{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+}

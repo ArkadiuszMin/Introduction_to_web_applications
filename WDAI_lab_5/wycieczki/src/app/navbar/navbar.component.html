@@ -1,0 +1,24 @@
+<div class = "logoConteiner">
+    <div class = "logoConteiner__nazwa1">Tripy po ulicy</div>
+    <div class = "logoConteiner__nazwa2">Roberta Kubicy</div>
+</div>
+<div class = "linksConteiner">
+    <a routerLink = "" class = "linksConteiner__link">Strona Główna</a>
+    <a routerLink = "trip-list" class = "linksConteiner__link">Lista wycieczek</a>
+    <a routerLink = "form" class = "linksConteiner__link">Dodaj wycieczke</a>
+    <a routerLink = "trip-history" class = "linksConteiner__link">Odbyte Wycieczki</a>
+    <div class = "linksConteiner__link" (mouseover) = "info()" (mouseout) = "info()">Info</div>
+    <div class = "linksConteiner__info" >
+        <div class = "linksConteiner__info--details" [hidden] = "showInfo">Next Trip:</div>
+        <div class = "linksConteiner__info--details" [hidden] = "showInfo">{{nextTrip}}</div>
+    </div>
+</div>
+<div class = "koszykConteiner" routerLink = "koszyk">
+    <div class = "koszykConteiner__koszyk">Koszyk</div>
+    <div class = "koszykConteiner__info">Ilość wycieczek: {{dane.quantity}}</div>
+    <div class = "koszykConteiner__info">Cena: {{dane.price|currency: 'USD'}}</div>
+</div>
+<div class = "login">
+    <div class = "login__name">Arkadiusz</div>
+    <div class = "login__name">Mincberger</div>
+</div>

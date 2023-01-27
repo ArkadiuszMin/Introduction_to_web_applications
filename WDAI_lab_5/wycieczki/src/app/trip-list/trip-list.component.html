@@ -1,0 +1,3 @@
+<div class = "conteiner">
+    <app-trip *ngFor = "let trip of tripList, index as i" [ngStyle] = "{'border': trip.price==highestPrice ? '5px solid green': trip.price==lowestPrice ? '5px solid red' : 'none' }" [index] = "i"[singleTrip] = "trip" (outputIndex) = "remove($event)"></app-trip>
+</div>

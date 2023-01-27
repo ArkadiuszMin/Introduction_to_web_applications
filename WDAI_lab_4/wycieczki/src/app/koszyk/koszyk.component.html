@@ -1,0 +1,5 @@
+<div class = "borders">Koszyk</div>
+<div class = "pasek"></div>
+<div class = "item" *ngFor = "let trip of trips">{{trip.name}}: {{trip.quantity}}</div>
+<div class = "pasek"></div>
+<div class = "borders">{{dane.price|currency: 'USD'}}</div>

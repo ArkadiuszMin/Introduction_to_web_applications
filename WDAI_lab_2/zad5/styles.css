@@ -1,0 +1,99 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+nav{
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    border-right: 1px solid black;
+    width: 20%;
+    margin-left: 10px;
+
+}
+
+#number{
+    padding: 10px 20px 10px 20px;
+    border: 2px solid rgb(18, 94, 83);
+    border-radius: 20px;
+    margin-right: 10%;
+    margin-left: 80%;
+}
+#navbar{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    width: 20%;
+    margin-left: 0;
+
+}
+
+.item{
+    display: flex;
+    align-items: center;
+    width: 50%;
+    padding: 20px;
+    padding-right: 400%;
+    font-size: 20px;
+    
+    color: rgb(18, 94, 83);
+    border-radius: 0px 20px 20px 0px;
+}
+
+.item:hover{
+    background-color: rgb(32, 187, 179);
+}
+
+.item:hover .imageborder{
+    border-color: white;
+}
+
+.item:hover span{
+    color: white;
+}
+
+.item:hover #number{
+    color: white;
+    border-color: white;
+}
+
+.imageborder{
+    margin-right: 20%;
+    padding: 5px;
+    border: 3px solid rgb(18, 94, 83);
+    border-radius: 15px;
+    font-size: 25px;
+}
+
+@media (max-width: 1650px){
+    .item{
+        font-size: 0px;
+        padding-right: 330%;
+        transition: font-size 0.7s;
+    }
+    nav{
+        width: 150px;
+        transition: width 0.7s;
+    }
+    #number{
+        padding: 10px;
+        border-radius: 20px;
+        font-size: 15px;
+        transition: padding 0.7s, border-radius 0.7s, font-size 0.7s;
+    }
+}
+
+@media (min-width: 1651px) {
+    .item{
+        font-size: 20px;
+        padding-right: 400%;
+        transition: font-size 1s;
+    }
+    nav{
+        width: 20%;
+        transition: width 1s;
+    }
+    
+    
+}
+

@@ -1,0 +1,62 @@
+<div class = "conteiner">
+    <div class = "conteiner__picture">
+        <img src="{{trip.images[indeks]}}" class = "conteiner__picture--image">
+        <div class = "conteiner__picture--right" (click) = "turnRight()">></div>
+        <div class = "conteiner__picture--left" (click) = "turnLeft()"><</div>
+        <div class = "opinia" *ngFor = "let opinia of trip.opinions">
+            <div class = "opinia__nick">{{opinia[0]}}</div>
+            <div class = "opinia__opinia">{{opinia[1]}}</div>
+            <div class = "opinia__data">{{opinia[2]}}</div>
+        </div>
+    </div>
+
+    <div class = "conteiner__info">
+        <h1 class = "conteiner__info--name">{{trip.name|uppercase}}</h1>
+        <h2 class = "conteiner__info--country">{{trip.country|uppercase}}</h2>
+        <p class = "conteiner__info--description">{{trip.description}}</p>
+        <div class = "conteiner__info--daty">
+            <div class = "data">{{trip.start}}</div>
+            <div class = "data">{{trip.end}}</div>
+            <div class ="starConteiner">
+                <div class = "starConteiner__star" (mouseover) = "light(1)" (mouseout) = "light(0)" (click)="rate(1)" [ngStyle] ="{'background-color': starNumber >= 1 ? 'gold': 'grey'}"></div>
+                <div class = "starConteiner__star" (mouseover) = "light(2)" (mouseout) = "light(0)" (click)="rate(2)" [ngStyle] ="{'background-color': starNumber >= 2 ? 'gold': 'grey'}"></div>
+                <div class = "starConteiner__star" (mouseover) = "light(3)" (mouseout) = "light(0)" (click)="rate(3)" [ngStyle] ="{'background-color': starNumber >= 3 ? 'gold': 'grey'}"></div>
+                <div class = "starConteiner__star" (mouseover) = "light(4)" (mouseout) = "light(0)" (click)="rate(4)" [ngStyle] ="{'background-color': starNumber >= 4 ? 'gold': 'grey'}"></div>
+                <div class = "starConteiner__star" (mouseover) = "light(5)" (mouseout) = "light(0)" (click)="rate(5)" [ngStyle] ="{'background-color': starNumber >= 5 ? 'gold': 'grey'}"></div>
+            </div>
+            <div class = "ratings">
+                <div class = "ratings__info">Ilość ocen: {{trip.ratingNumber}}</div>
+                <div class = "ratings__info">Ocena: {{trip.rating}}</div>
+            </div>
+        </div>
+        <div class = "podsekcja">
+            <div class = "podsekcja__licznik">
+                <div class = "podsekcja__licznik--plusminus" *ngIf = "licznik != 0" (click) = "odejmij()">+</div>
+                <div class = "podsekcja__licznik--ilosc">{{licznik}}</div>
+                <div class = "podsekcja__licznik--plusminus" id = "minus" *ngIf = "licznik != trip.capacity" (click) = "dodaj()">-</div>
+            </div>
+            <div class = "podsekcja__rezerwacje">
+                <div class = "podsekcja__rezerwacje--warning" *ngIf = "licznik <= 3 && licznik!=0">!</div>
+                <div class = "podsekcja__rezerwacje--brak" *ngIf = "licznik == 0">Brak miejsc</div>
+                <div class = "podsekcja__rezerwacje--cena">{{trip.price|currency:'USD'}}</div>
+            </div>
+        </div>
+        <div class = "powrot" routerLink = "/trip-list">Powrót</div>
+        <form #form = "ngForm" class = "formularz" (ngSubmit) = "addOpinion()">
+            <div class = "formularz__conteiner">
+                <label for="Nick">Podaj Nick:</label>
+                <input type="text" name="Nick" class = "formularz__conteiner--nick" [(ngModel)] = "opinion[0]" required>
+            </div>
+            <div class = "formularz__conteiner">
+                <label for="opinia">Miejsce na Opinie:</label>
+                <textarea name="opinia" class = "formularz__conteiner--opinion" [(ngModel)] = "opinion[1]" required></textarea>
+                <div class = "formularz__conteiner--error" [hidden] = "opinionFlag">*Opinia powinno mieć więcej niż 50 znaków i mniej niż 500 znaków</div>
+            </div>
+            <div class = "formularz__conteiner">
+                <label for="data">Podaj Nick:</label>
+                <input type="date" name="data" class = "formularz__conteiner--nick" [(ngModel)] = "opinion[2]">
+            </div>
+            <button type="submit" class = "formularz__submit" [disabled] = "!form.valid">Dodaj</button>
+        </form>
+    </div>
+</div>

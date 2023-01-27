@@ -1,0 +1,43 @@
+.bigConteiner{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.conteiner{
+    margin-top: 30px;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 50px;
+    border: 2px solid black;
+    border-radius: 50px;
+    box-shadow: 0 0 5px 5px rgba(99, 99, 99, 0.4);
+
+    &__table{
+        width: 100%;
+        & td{
+            text-align: center;
+            vertical-align: middle;
+        }
+    }
+}
+
+.filter{
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    margin-top: 10px;
+}
+
+.labelek{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.selectcik{
+    height: 30px;
+    width: 140px;
+}
